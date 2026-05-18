@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .jamdani-pattern {
+            background-color: transparent;
+            background-image: radial-gradient(#004317 0.5px, transparent 0.5px), radial-gradient(#004317 0.5px, #f8faf3 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.05;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#3e0117",
+                        "inverse-primary": "#93d697",
+                        "secondary-container": "#feb234",
+                        "inverse-surface": "#2e312d",
+                        "on-surface-variant": "#40493f",
+                        "on-primary-fixed-variant": "#0c5221",
+                        "surface-dim": "#d8dbd4",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#8fd394",
+                        "secondary-fixed": "#ffddb2",
+                        "on-secondary-fixed": "#291800",
+                        "primary-fixed": "#aef3b1",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e6e9e2",
+                        "surface-container-highest": "#e0e3dc",
+                        "tertiary": "#662035",
+                        "on-secondary-container": "#6d4700",
+                        "tertiary-fixed-dim": "#ffb1c1",
+                        "primary-fixed-dim": "#93d697",
+                        "surface": "#f8faf3",
+                        "outline": "#717a6f",
+                        "primary-container": "#1a5c2a",
+                        "inverse-on-surface": "#eff2ea",
+                        "surface-container": "#ecefe7",
+                        "tertiary-container": "#83374b",
+                        "on-error": "#ffffff",
+                        "background": "#f8faf3",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-background": "#191d18",
+                        "secondary": "#815500",
+                        "on-tertiary-fixed-variant": "#772e42",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#2a6b37",
+                        "tertiary-fixed": "#ffd9df",
+                        "on-primary-fixed": "#002108",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3dc",
+                        "primary": "#004317",
+                        "outline-variant": "#c0c9bc",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8faf3",
+                        "surface-container-low": "#f2f5ed",
+                        "on-tertiary-container": "#ffacbd",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb94c",
+                        "on-surface": "#191d18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "auto",
+                        "md": "24px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "max-width": "1200px",
+                        "sm": "12px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Noto Sans"],
+                        "headline-lg": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "headline-sm": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-lg-mobile": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface docked full-width top-0 sticky z-50 shadow-sm border-b border-outline-variant">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<div class="flex items-center gap-xs">
+<span class="font-headline-md text-headline-md font-bold text-primary">Academy BD</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Notice Board</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Results</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="font-label-md text-label-md text-primary font-bold">BN/EN</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section / Title -->
+<section class="relative py-lg bg-surface-container-low overflow-hidden">
+<div class="jamdani-pattern absolute inset-0"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-xs">Notice Board</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Stay updated with the latest academic announcements, examination schedules, and institutional events.</p>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="bg-surface sticky top-20 z-40 border-b border-outline-variant">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-md">
+<div class="flex items-center gap-sm overflow-x-auto pb-xs scrollbar-hide">
+<button class="px-md py-xs bg-primary text-on-primary rounded-full font-label-md text-label-md whitespace-nowrap">All</button>
+<button class="px-md py-xs bg-surface-container-high text-on-surface-variant hover:bg-surface-variant transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">Academic</button>
+<button class="px-md py-xs bg-surface-container-high text-on-surface-variant hover:bg-surface-variant transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">Exam</button>
+<button class="px-md py-xs bg-surface-container-high text-on-surface-variant hover:bg-surface-variant transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">Holiday</button>
+<button class="px-md py-xs bg-surface-container-high text-on-surface-variant hover:bg-surface-variant transition-colors rounded-full font-label-md text-label-md whitespace-nowrap">General</button>
+</div>
+</div>
+</section>
+<!-- Notices Grid -->
+<section class="py-xl max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Notice Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-primary"></div>
+<div class="p-md flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-sm font-label-md text-label-md">
+                                15 OCT 2024
+                            </div>
+<span class="text-secondary font-bold text-xs uppercase tracking-wider">Academic</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-sm group-hover:text-primary transition-colors">
+                            বার্ষিক পরীক্ষা ২০২৪ এর সময়সূচী সংক্রান্ত বিজ্ঞপ্তি | Annual Exam 2024 Schedule
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-3">
+                            The comprehensive schedule for the upcoming Annual Examination 2024 has been released. All students are advised to download the PDF from the portal...
+                        </p>
+</div>
+<div class="px-md pb-md">
+<button class="w-full flex items-center justify-center gap-xs border-2 border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95">
+                            Read More
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Notice Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-secondary"></div>
+<div class="p-md flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-sm font-label-md text-label-md">
+                                12 OCT 2024
+                            </div>
+<span class="text-secondary font-bold text-xs uppercase tracking-wider">Holiday</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-sm group-hover:text-primary transition-colors">
+                            দুর্গাপূজা উপলক্ষে ছুটির বিজ্ঞপ্তি | Durga Puja Holiday Notice
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-3">
+                            On the occasion of Sharadiya Durga Puja, the school will remain closed from October 18th to October 24th. Normal classes will resume on...
+                        </p>
+</div>
+<div class="px-md pb-md">
+<button class="w-full flex items-center justify-center gap-xs border-2 border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95">
+                            Read More
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Notice Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-primary"></div>
+<div class="p-md flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-sm font-label-md text-label-md">
+                                10 OCT 2024
+                            </div>
+<span class="text-secondary font-bold text-xs uppercase tracking-wider">Exam</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-sm group-hover:text-primary transition-colors">
+                            এসএসসি ২০২৫ নির্বাচনী পরীক্ষার ফলাফল | SSC 2025 Test Result
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-3">
+                            The results of the SSC 2025 Test Examination have been published. Students can check their results on the official website or the main board...
+                        </p>
+</div>
+<div class="px-md pb-md">
+<button class="w-full flex items-center justify-center gap-xs border-2 border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95">
+                            Read More
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Notice Card 4 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-primary"></div>
+<div class="p-md flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-sm font-label-md text-label-md">
+                                05 OCT 2024
+                            </div>
+<span class="text-secondary font-bold text-xs uppercase tracking-wider">General</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-sm group-hover:text-primary transition-colors">
+                            অভিভাবক সমাবেশ সংক্রান্ত বিজ্ঞপ্তি | Parent-Teacher Meeting Notice
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-3">
+                            A general meeting for all parents of Class 6 to 10 has been scheduled for Saturday, 12th October in the school auditorium to discuss...
+                        </p>
+</div>
+<div class="px-md pb-md">
+<button class="w-full flex items-center justify-center gap-xs border-2 border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95">
+                            Read More
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Notice Card 5 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-secondary"></div>
+<div class="p-md flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-sm font-label-md text-label-md">
+                                01 OCT 2024
+                            </div>
+<span class="text-secondary font-bold text-xs uppercase tracking-wider">Academic</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-sm group-hover:text-primary transition-colors">
+                            নতুন শিক্ষাক্রম সংক্রান্ত বিশেষ নির্দেশনা | Special Guidelines for New Curriculum
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-3">
+                            Detailed guidelines regarding the implementation of the new national curriculum for the academic year have been uploaded for teachers and students...
+                        </p>
+</div>
+<div class="px-md pb-md">
+<button class="w-full flex items-center justify-center gap-xs border-2 border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95">
+                            Read More
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Notice Card 6 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-primary"></div>
+<div class="p-md flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-sm font-label-md text-label-md">
+                                28 SEP 2024
+                            </div>
+<span class="text-secondary font-bold text-xs uppercase tracking-wider">General</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-sm group-hover:text-primary transition-colors">
+                            বার্ষিক সাংস্কৃতিক প্রতিযোগিতা | Annual Cultural Competition 2024
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-3">
+                            Registrations are now open for the Annual Cultural Competition. Interested students are requested to submit their names to their respective class teachers...
+                        </p>
+</div>
+<div class="px-md pb-md">
+<button class="w-full flex items-center justify-center gap-xs border-2 border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-primary hover:text-on-primary transition-all active:scale-95">
+                            Read More
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-xl flex items-center justify-center gap-xs">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors text-on-surface-variant font-label-md text-label-md">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors text-on-surface-variant font-label-md text-label-md">3</button>
+<span class="px-xs text-on-surface-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors text-on-surface-variant font-label-md text-label-md">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Newsletter / Subscription (Asymmetric Layout) -->
+<section class="bg-primary-container py-xl overflow-hidden relative">
+<div class="jamdani-pattern absolute inset-0 opacity-10"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-lg items-center relative z-10">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-primary-container mb-sm">Never Miss an Update</h3>
+<p class="font-body-md text-body-md text-on-primary-container/80">Subscribe to our weekly newsletter to get the latest notices and academic news delivered directly to your inbox.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-sm">
+<input class="flex-grow bg-surface-container-lowest border-none focus:ring-2 focus:ring-secondary rounded-lg py-3 px-md font-body-md text-body-md" placeholder="Enter your email" type="email"/>
+<button class="bg-secondary text-on-secondary font-label-md text-label-md px-lg py-3 rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap">Subscribe Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary full-width border-t-4 border-secondary">
+<div class="jamdani-pattern opacity-10 py-xl">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-4 gap-lg text-on-primary">
+<div class="col-span-1 md:col-span-1">
+<h4 class="font-headline-md text-headline-md font-bold mb-md">Academy BD</h4>
+<p class="font-body-md text-body-md opacity-80 mb-md">Dedicated to providing quality education and fostering excellence in every student.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold mb-md uppercase tracking-wider text-secondary">Quick Links</h5>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-body-md opacity-80 hover:text-secondary transition-colors" href="#">Academic Calendar</a></li>
+<li><a class="font-body-md text-body-md opacity-80 hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md opacity-80 hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md font-bold mb-md uppercase tracking-wider text-secondary">Contact</h5>
+<ul class="space-y-sm">
+<li class="flex items-center gap-xs font-body-md text-body-md opacity-80"><span class="material-symbols-outlined text-sm">location_on</span> Dhaka, Bangladesh</li>
+<li class="flex items-center gap-xs font-body-md text-body-md opacity-80"><span class="material-symbols-outlined text-sm">mail</span> info@academybd.edu</li>
+</ul>
+</div>
+<div class="flex flex-col items-center md:items-end">
+<img alt="School Logo" class="w-24 mb-md" data-alt="A professional circular institutional logo for a school in Bangladesh, featuring a green shield with a golden sunburst and an open book. The design is clean and modern, representing academic excellence and institutional trust. The logo is rendered with sharp vectors on a deep green background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6UKoB5_vjgY68GX0RCtYjw7d4MdUVYljO7ftgGCw_LXUA1YaeeoibasW9z0tPT_f4zWWRq6ETadaPmUhPhIfJkyYGcWqCMwhH3njNQ9GnacgBFLEvhvr2K88ACXoJMHYFaqcIJ0bY4DE9R_vCI-YAaL37yOtcrvnALnjY4rMnfnkc_Z5fx3UUc657rGRrXJ0ICUzQxvZ0oG7Ve4Mi2jLVd66VrJ7Q0crqj6JHG2B5k1vlXBS6RuNqmCMA77_0ZmfrsSDpy7BjVS6O"/>
+<div class="flex gap-md">
+<a class="hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-xl pt-lg border-t border-on-primary/10 text-center md:text-left">
+<p class="font-body-md text-body-md text-on-primary/80">© 2024 Academy BD. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

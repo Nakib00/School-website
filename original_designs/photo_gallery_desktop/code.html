@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#3e0117",
+                        "inverse-primary": "#93d697",
+                        "secondary-container": "#feb234",
+                        "inverse-surface": "#2e312d",
+                        "on-surface-variant": "#40493f",
+                        "on-primary-fixed-variant": "#0c5221",
+                        "surface-dim": "#d8dbd4",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#8fd394",
+                        "secondary-fixed": "#ffddb2",
+                        "on-secondary-fixed": "#291800",
+                        "primary-fixed": "#aef3b1",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e6e9e2",
+                        "surface-container-highest": "#e0e3dc",
+                        "tertiary": "#662035",
+                        "on-secondary-container": "#6d4700",
+                        "tertiary-fixed-dim": "#ffb1c1",
+                        "primary-fixed-dim": "#93d697",
+                        "surface": "#f8faf3",
+                        "outline": "#717a6f",
+                        "primary-container": "#1a5c2a",
+                        "inverse-on-surface": "#eff2ea",
+                        "surface-container": "#ecefe7",
+                        "tertiary-container": "#83374b",
+                        "on-error": "#ffffff",
+                        "background": "#f8faf3",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-background": "#191d18",
+                        "secondary": "#815500",
+                        "on-tertiary-fixed-variant": "#772e42",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#2a6b37",
+                        "tertiary-fixed": "#ffd9df",
+                        "on-primary-fixed": "#002108",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3dc",
+                        "primary": "#004317",
+                        "outline-variant": "#c0c9bc",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8faf3",
+                        "surface-container-low": "#f2f5ed",
+                        "on-tertiary-container": "#ffacbd",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb94c",
+                        "on-surface": "#191d18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "auto",
+                        "md": "24px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "max-width": "1200px",
+                        "sm": "12px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Noto Sans"],
+                        "headline-lg": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "headline-sm": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-lg-mobile": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.jamdani-pattern {
+    background-color: #004317;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBmntrWT9_h87arvhW-uSwhvkIy8UQnKYRZ_FX7Xvex4O-e8irzQOT2pJcfUPEtllfkpDwR2mm4ou5W6yzsQNF_dG_7rDZgNXJs6rR4bprJSEc0oZuR8nvDdduTcXnv0Rn2pVX5bUhl5irkqFOPZXmkaB7MW6u4yO8PammLww1uZsyheMQm13HZBkAl9hRO9B1z0PnNPgvNR6F2SfaNKehl8poUlTudMWN4-GzKGTHfrN29_uK7jB0QFaG02Jcsd4MKuAEMY9KhRG7f);
+    opacity: 0.05
+    }
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 24px
+    }
+.masonry-item-tall {
+    grid-row: span 2
+    }
+.masonry-item-wide {
+    grid-column: span 2
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant shadow-sm h-20 flex items-center">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between w-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">Academy BD</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Notice Board</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Results</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-label-md text-label-md text-primary border border-primary px-4 py-2 rounded-lg hover:bg-primary/5 transition-colors">BN/EN</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero Section / Title -->
+<div class="mb-xl text-center md:text-left">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-base">Institutional Gallery</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A visual journey through our academic milestones, cultural festivities, and sporting achievements. Capturing the spirit of Academy BD.</p>
+</div>
+<!-- Filter / Tabs -->
+<div class="flex flex-wrap gap-sm mb-lg border-b border-outline-variant pb-md">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md">All Moments</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-2 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">Annual Sports 2024</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-2 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">Science Fair</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-2 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">National Day 2023</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-2 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">Graduation</button>
+</div>
+<!-- Balanced Grid Section 1: Annual Sports -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="w-2 h-8 bg-secondary rounded-full"></span>
+                    Annual Sports 2024
+                </h2>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline">
+                    View Album <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="masonry-grid">
+<div class="masonry-item-tall relative overflow-hidden rounded-xl bg-surface-container group cursor-zoom-in">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A dynamic shot of students competing in a track and field event at a sun-drenched stadium. The young athletes wear vibrant green and gold jerseys, their faces focused with determination. Soft golden hour lighting illuminates the scene, creating long shadows on the red track. The atmosphere is energetic and celebratory, reflecting an elite academic sporting culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx9T5inD4E21gK20LrzIwntpB51k8bPKZXPrEXwBsNeVHVBMoVhhyEoRsF0W6sKprACt2kP0haGkeX9Num26m_l4oe8C_7xQVobc3EXA9KGfx5NRucQqZ05d0jBl6WuL9aNbkMSF8nZayhbUCySMbMWSJGyEXZNu_v1B_By5vBpGmgJoqtuVd0RTttxLTNCfZkYPeLOcT7QbibhI-13C_UyoH_sOYH3eieskX-491iUx5dvMAokGNGCBBAWo4vKvsfLEKBfs7RKn0H"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-md">100m Sprint Finals</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container group cursor-zoom-in">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide-angle shot of a school football pitch during an awards ceremony. The lush green grass is perfectly manicured, and a bright gold trophy stands on a pedestal in the foreground. In the background, students and parents applaud under a clear blue sky. The lighting is bright and high-key, conveying a sense of institutional pride and achievement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdFO7DY_TtYV2_1zKxGx4feFYxmOgPqvfktcveocLLof1kpOd46yPNyLO079QtHLwWP_EGmQ7CcnYRtnlEOP8g6cmsgII-fpsjkwTGuAogi5CaovJp9y3nYH6H-ZVawfuOIkGksiOVGGA_kkSB0i6Lo5aRlXsEblUmqPctMkNM_MY_MN2p0yt6gyqRIedQPZ1s8pkIJo_FXfEQSoZF6QK7fHR20GEfHSoHf45wSiNFN0Y9VRnoWQJqXUwA9pm7H3PHCv8ORUA626tj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-md">Championship Trophy</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container group cursor-zoom-in">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Students in matching school uniforms engaged in a collaborative group exercise on a bright indoor court. The architectural style is modern with large windows letting in natural daylight. The color palette is dominated by deep forest green and pristine white. The mood is one of teamwork and disciplined physical education." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2hCjXvB_pGe718taOe3be4UHl4S_ez5ZIHrF7923tJ5NWlGu0FCRw1QAg1jH23azaYXXX4Pkxzs4Ruhdt3_puUekdXQ-7LsqpwZ6kAP3hgCUuVgf-GOMjg1GyS5rSn5EgW1o0cau6hNbiyDV51Q2l4NAkZYYxCOlRHY8llchnX1505KY8pFHUBQXKOz2-bcT1Mh-ybTijZnatzl5d-egQepmldTpGuvnfsdb8cQXD-v1HC43auJ0xhRAMfCzw6ILJCG-Q3KBELfip"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-md">Team Drills</span>
+</div>
+</div>
+<div class="masonry-item-wide relative overflow-hidden rounded-xl bg-surface-container group cursor-zoom-in">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A festive parade at the school grounds with students holding colorful banners and traditional Bangladeshi flags. The scene is bustling with life and movement, shot with a shallow depth of field. Warm sunlight catches the vibrant colors of the traditional attire worn for the cultural performance. The overall aesthetic is professional yet deeply rooted in cultural heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-5z3asA9EtRzjZr0Q-rqYQlVNBzZ0KlGC923rkT39162Uo5HtMuTU9hRX7176H6olghUFRlF675WJdFbnw0V7UsBpPiaBNywofDCeI3LdZhgX9vkO-5ZKWmB-ECdzbpOhX15hm4mJwKVPWPArj7NslMdx6Gio4YHr4dKKoDvuReuenlubEuUboGuw7VIHb3zyF6CwHtqu736VFKcntbb6Pm0303x8crOI_5WebTUJafeDw60Wgv_QQvRy14gLttVj_2uXLSvPiQLb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<span class="text-white font-label-md">Opening Ceremony Parade</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Balanced Grid Section 2: Science Fair -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="w-2 h-8 bg-secondary rounded-full"></span>
+                    InnoVise Science Fair
+                </h2>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline">
+                    View Album <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="aspect-square relative overflow-hidden rounded-xl bg-surface-container group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A close-up of a student conducting a chemistry experiment in a high-tech school laboratory. Glass beakers filled with brightly colored liquids sit on a clean white surface. Soft blue and white studio-style lighting highlights the precision and modern equipment. The focus is sharp on the student's hands, emphasizing academic rigor and curiosity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Pj5vSuqpawRtLqK6aTX4bOrick0Jx2Pi9GgsPmRo544N_vfPd9pKTSfIZkCYApdeSZg-w4NddOrWnBEHWMcdXCSEszJDKoknL5bJbb4RF4JhL6LPBD4fcRxJs2BMPGZkA97bZsiyD4UuEVEEqcNPf7FCbWuCYkR6mw1fFZExdICSTLMTRtfKhk61Bzp8LD5mnQ24e7SC3imePFAsyNAO06vowH9K-HlJSuaC37QWZ3OtAVOCHGY5lA3NEGzR9mxfeVJSEkL1j-aM"/>
+</div>
+<div class="aspect-square relative overflow-hidden rounded-xl bg-surface-container group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A collaborative group of students working on a robotics project in a spacious, modern classroom. They are surrounded by technical components and laptops. Natural light pours in through large floor-to-ceiling windows, creating a bright and inspiring workspace. The design aesthetic is minimalist with corporate green accents on the furniture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChjrBRqJUo6Ane6gP14C00TbYcjmkpHc9oUI1ysuftVm5fVaX2fPW-_hjY7MJvVgeKFvTG-gDyqb_WqZtnjmpH6HZeso0rUMYw2a-Dnc-Gq11AZUxrHI0fGmhmuRbNLuSfNZCEheAmBdurDOFnjoJypusopgN_ADxnfVRcv7bEIw-JRz4pGD3q0rWx5_l85-M2FQiTfQncmTbbEaUdfP6YyLUGqz59OD0egEyO_ljnvUt9DjpY3qbUG2HkM7SLF0hgfSCTnrxmHuqk"/>
+</div>
+<div class="aspect-square relative overflow-hidden rounded-xl bg-surface-container group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An expansive view of the science fair exhibition hall, filled with student displays and interactive booths. The lighting is bright and professional, highlighting the various scientific posters and models. A diverse crowd of parents and educators are seen engaging with the students' work. The mood is intellectual, innovative, and highly organized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQB94jHmkrHTHlUyPfhmlkG5F9dSUSY-mw7me58C_OIzPBjlrGO6N-iWno7zXZSsaOxHHNohLBxIe1CTyTWMV3hP-N6mqZvJwjM4WjExkRKFFMhbbgLmb0TbN9ML89gPRb-BFxZSo4WdxBbTeZlWNuyTYVraNOG7ozTtVw0LhSTZ-fQj9DBGNYaDpg1kXCFP7GJe5LryCwLj8cgzGpFU03HNEPzDKCJNvWVE-KycDnaPVmA8D7qCmria1e3at3IqEUwXguwm_9SRzA"/>
+</div>
+<div class="aspect-square relative overflow-hidden rounded-xl bg-surface-container group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Macro photography of a student's biological model of a DNA strand, displayed prominently on a white pedestal. The background is softly blurred, showing other science fair projects in a clean, modern gallery setting. The lighting is soft and focused, giving the model a prestigious and authoritative quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6N0eQ7bhiHs3gh0ZY-0x9z6jU3Ex8g0RdQZTHBUEb2fYF6IeHePYw1kyvNh0NkdXtksrMDUfU2bV22OGM_yMHFmdw9HyICtmDSeEvkxj27yr_r0RU8ykLTIB4JQHMpgtr1N1Nq2e35nZG58P6owjW5lBKE4wILq_z-WAZ_BAcGBUcyT3UZiQSsLn4QGTj85s5jO0PqnmIOfH0eA3aS0OIFzMsyMIYlXCg9Jv1AHUH7IzwfIavnc8Ymruo1rwBBhzYT-TiNXAhFMK0"/>
+</div>
+</div>
+</section>
+<!-- Blog-style Event Section -->
+<section class="py-xl bg-surface-container-low rounded-3xl px-md md:px-lg border border-outline-variant">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Featured Event Story</h2>
+<div class="h-1 w-20 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="bg-surface rounded-2xl overflow-hidden shadow-md border border-outline-variant">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="A cinematic wide shot of a university graduation ceremony held in a grand hall with dark wood paneling and green velvet curtains. Graduates in black caps and gowns are seen tossing their hats into the air. The lighting is dramatic and celebratory, with spotlights creating a sense of a major life milestone. The composition is classic and institutional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWJ3nPMfvojZK5JHPU1U7Pw_sxlN_t8ieAgDHT_Kvvdnoqo1eysutvS6Pxj46CNQYZl21LcPWW2VnzSUyZXmwkM2iduNmrogcFWy5XeaffZ5Xe_BTdjcOx58MnxgpOCnlSBpe13-mSuXLNh9K8iHBMnNwiCNKYdtzPO4H5PQtVPR-a2VLt7FkR1ZJqJgaxu9DpJ-zoZ5sYD1b-t7eFBbfRoSNsBubfklUfdZlqF9XU4oQNNw2eRZVth79y8dI6Fv_-0yiiGVqtJ0fQ"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-4 py-1 rounded-full font-label-md text-label-md">Feature Story</div>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-4 mb-md text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> May 12, 2024</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> By Academic Council</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-md">Reflecting on the Class of 2024 Graduation Ceremony</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg leading-relaxed">
+                            Last week, Academy BD celebrated the remarkable achievements of our graduating class. The ceremony was a testament to the hard work, resilience, and academic excellence that our students have demonstrated over the years. From the moving speeches by our faculty to the spirited hat-toss, every moment was filled with pride and hope for the future. We are honored to have played a role in their journey and look forward to their contributions to society.
+                        </p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-on-primary bg-primary px-8 py-3 rounded-lg hover:opacity-90 transition-opacity" href="#">
+                            Read Full Story <span class="material-symbols-outlined">menu_book</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t-4 border-secondary mt-xl">
+<div class="jamdani-pattern absolute inset-0 pointer-events-none"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold mb-md">Academy BD</div>
+<p class="font-body-md text-body-md text-on-primary/80">Empowering future leaders through excellence in education and cultural heritage since 1995.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase mb-md">Quick Links</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Academic Calendar</a></li>
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase mb-md">Departments</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Science &amp; Tech</a></li>
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Arts &amp; Culture</a></li>
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Physical Education</a></li>
+<li><a class="font-body-md text-body-md hover:text-secondary transition-colors" href="#">Research Center</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-label-md text-secondary-fixed-dim uppercase mb-md">Connect</h4>
+<div class="flex gap-md">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">mail</span>
+</div>
+</div>
+</div>
+<div class="border-t border-on-primary/10 pt-lg text-center md:text-left">
+<p class="font-body-md text-body-md text-on-primary/60">© 2024 Academy BD. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- FAB for quick upload (Admin style preview) -->
+<button class="fixed bottom-8 right-8 bg-secondary text-on-secondary-fixed p-4 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform z-40">
+<span class="material-symbols-outlined">add_a_photo</span>
+</button>
+</body></html>

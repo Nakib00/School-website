@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .jamdani-pattern {
+            background-color: transparent;
+            background-image:  linear-gradient(30deg, #1a5c2a 12%, transparent 12.5%, transparent 87%, #1a5c2a 87.5%, #1a5c2a),
+            linear-gradient(150deg, #1a5c2a 12%, transparent 12.5%, transparent 87%, #1a5c2a 87.5%, #1a5c2a),
+            linear-gradient(30deg, #1a5c2a 12%, transparent 12.5%, transparent 87%, #1a5c2a 87.5%, #1a5c2a),
+            linear-gradient(150deg, #1a5c2a 12%, transparent 12.5%, transparent 87%, #1a5c2a 87.5%, #1a5c2a),
+            linear-gradient(60deg, #1a5c2a77 25%, transparent 25.5%, transparent 75%, #1a5c2a77 75%, #1a5c2a77),
+            linear-gradient(60deg, #1a5c2a77 25%, transparent 25.5%, transparent 75%, #1a5c2a77 75%, #1a5c2a77);
+            background-size: 40px 70px;
+            background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+            opacity: 0.03;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#3e0117",
+                        "inverse-primary": "#93d697",
+                        "secondary-container": "#feb234",
+                        "inverse-surface": "#2e312d",
+                        "on-surface-variant": "#40493f",
+                        "on-primary-fixed-variant": "#0c5221",
+                        "surface-dim": "#d8dbd4",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#8fd394",
+                        "secondary-fixed": "#ffddb2",
+                        "on-secondary-fixed": "#291800",
+                        "primary-fixed": "#aef3b1",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e6e9e2",
+                        "surface-container-highest": "#e0e3dc",
+                        "tertiary": "#662035",
+                        "on-secondary-container": "#6d4700",
+                        "tertiary-fixed-dim": "#ffb1c1",
+                        "primary-fixed-dim": "#93d697",
+                        "surface": "#f8faf3",
+                        "outline": "#717a6f",
+                        "primary-container": "#1a5c2a",
+                        "inverse-on-surface": "#eff2ea",
+                        "surface-container": "#ecefe7",
+                        "tertiary-container": "#83374b",
+                        "on-error": "#ffffff",
+                        "background": "#f8faf3",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-background": "#191d18",
+                        "secondary": "#815500",
+                        "on-tertiary-fixed-variant": "#772e42",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#2a6b37",
+                        "tertiary-fixed": "#ffd9df",
+                        "on-primary-fixed": "#002108",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3dc",
+                        "primary": "#004317",
+                        "outline-variant": "#c0c9bc",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8faf3",
+                        "surface-container-low": "#f2f5ed",
+                        "on-tertiary-container": "#ffacbd",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ffb94c",
+                        "on-surface": "#191d18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "auto",
+                        "md": "24px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "max-width": "1200px",
+                        "sm": "12px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Noto Sans"],
+                        "headline-lg": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "headline-sm": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-lg-mobile": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<div class="flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="docked left-0 h-full w-64 bg-surface-container dark:bg-inverse-surface shadow-md flex flex-col h-screen py-6 sticky top-0 hidden md:flex shrink-0">
+<div class="px-6 mb-lg">
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface">Admin Portal</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">School Management</p>
+</div>
+<nav class="flex-grow space-y-2">
+<!-- Dashboard Active -->
+<a class="bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-lg px-4 py-3 mx-2 flex items-center space-x-3 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 flex items-center space-x-3 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-label-md text-label-md">Notices</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 flex items-center space-x-3 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">Teachers</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 flex items-center space-x-3 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label-md text-label-md">Results</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 flex items-center space-x-3 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined">collections</span>
+<span class="font-label-md text-label-md">Gallery</span>
+</a>
+</nav>
+<div class="px-6 pt-6 border-t border-outline-variant mt-auto">
+<div class="flex items-center space-x-3">
+<img alt="Admin User" class="w-10 h-10 rounded-full object-cover border-2 border-primary" data-alt="A professional headshot of a middle-aged male school administrator with a warm, confident expression. He is wearing a formal dark suit and glasses, set against a blurred academic background with bookshelves. The lighting is soft and professional, emphasizing institutional trust and leadership. The image has a clean, high-key corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOtraRo9SCV9NkMOBAMVM1fZ5z2cdAvwrz1jNGsOjngn7aBtF1qw7Z2mr9NJiTRKcKSk9GxaQlyLh76Tn5MDm5bXRG8MwlMbc9QWkFurIgDq334W9Az0TZqQBe0wxuDch3MPCgcX5py_sWWLtFMO_hJzGKbQdD2ZYtZaZ0v7XNOuZFRiE7oSwTp5BHYU_vck-dTsEMczKeP9wzf1X62D7vI9VJSqAXJKqQhhYkEGxjIx7kgtVoPMpftoB_57xwv01MG1x9mY1T-qEC"/>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Dr. Rahman</p>
+<p class="text-[12px] text-on-surface-variant">Super Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow relative min-w-0">
+<!-- TopBar Profile/Search -->
+<header class="h-20 bg-surface flex items-center justify-between px-margin-mobile md:px-md border-b border-outline-variant sticky top-0 z-30">
+<div class="flex items-center md:hidden">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<span class="ml-4 font-headline-sm text-headline-sm font-bold text-primary">Academy BD</span>
+</div>
+<div class="hidden md:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant w-96">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-full ml-2 placeholder:text-on-surface-variant/50" placeholder="Search for students, teachers, results..." type="text"/>
+</div>
+<div class="flex items-center space-x-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors relative">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="group relative">
+<button class="flex items-center space-x-2 p-1 rounded-full hover:bg-surface-container transition-colors">
+<img alt="Profile" class="w-8 h-8 rounded-full object-cover" data-alt="A close-up profile avatar showing a professional male administrator in a suit. The image is circular and framed with a thin white border. The background is a soft, warm neutral tone. The lighting is bright and clean, fitting a modern dashboard interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp26HTEQv8loIED9YPkixrlyx_95nnfKhlfV7VKA1qBdaKAnZbCiYXelhYQ6pNul9rrSS7AYk_Ey1WUX5esZgoLWYbHoNYD2qCUZeY2djcy3j5hxWas92OQlNDrl-eWZLvhp4-e2P94a3VcqiAlibUA1YE9io0WHBWoaPi8kYWhcOYeZWChm-kdsEpMuzLPbVxpzXYjmFwe07aC9-2QebsAV6ebq9z5jUM-kebBDfAZB1gux03q3rLiQV05g9AxVrCmBGhDi5_a00Y"/>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-margin-mobile md:p-md max-w-max-width mx-auto">
+<div class="jamdani-pattern absolute inset-0 pointer-events-none"></div>
+<div class="relative z-10">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Institutional Overview</h2>
+<p class="text-body-lg text-on-surface-variant">Welcome back, Administrator. Here is what's happening today.</p>
+</div>
+<!-- Summary Cards (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-lg">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant border-t-4 border-t-primary transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">campaign</span>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed-dim px-2 py-1 rounded">+12%</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Notices</h3>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">142</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant border-t-4 border-t-secondary transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">group</span>
+<span class="font-label-md text-label-md text-secondary bg-secondary-fixed px-2 py-1 rounded">Active</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Teachers</h3>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">86</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant border-t-4 border-t-tertiary transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-tertiary text-3xl">collections</span>
+<span class="font-label-md text-label-md text-tertiary bg-tertiary-fixed px-2 py-1 rounded">New</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Gallery Posts</h3>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">524</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant border-t-4 border-t-primary-container transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">description</span>
+<span class="font-label-md text-label-md text-on-primary-container bg-primary-container/20 px-2 py-1 rounded">98%</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Results Uploaded</h3>
+<p class="font-headline-md text-headline-md text-on-surface mt-1">12,402</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Activity Feed -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Activity</h3>
+<button class="text-primary font-label-md text-label-md hover:underline">View All</button>
+</div>
+<div class="divide-y divide-outline-variant">
+<!-- Activity Item -->
+<div class="p-4 flex items-start space-x-4 hover:bg-surface-container-low transition-colors">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">upload_file</span>
+</div>
+<div class="flex-grow">
+<p class="text-body-md text-on-surface"><span class="font-bold">Admin Sarah</span> uploaded final exam results for <span class="font-bold text-primary">Class 10</span>.</p>
+<p class="text-label-md text-on-surface-variant opacity-60">2 hours ago</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Activity Item -->
+<div class="p-4 flex items-start space-x-4 hover:bg-surface-container-low transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">person_add</span>
+</div>
+<div class="flex-grow">
+<p class="text-body-md text-on-surface">New teacher profile created for <span class="font-bold">Mr. Kamal Ahmed</span> (Mathematics Department).</p>
+<p class="text-label-md text-on-surface-variant opacity-60">5 hours ago</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Activity Item -->
+<div class="p-4 flex items-start space-x-4 hover:bg-surface-container-low transition-colors">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary">campaign</span>
+</div>
+<div class="flex-grow">
+<p class="text-body-md text-on-surface">Urgent notice: <span class="font-bold">"School Closure for National Holiday"</span> published.</p>
+<p class="text-label-md text-on-surface-variant opacity-60">Yesterday at 4:30 PM</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Activity Item -->
+<div class="p-4 flex items-start space-x-4 hover:bg-surface-container-low transition-colors">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">photo_library</span>
+</div>
+<div class="flex-grow">
+<p class="text-body-md text-on-surface"><span class="font-bold">Gallery updated:</span> 24 new photos added to "Annual Sports Day 2024".</p>
+<p class="text-label-md text-on-surface-variant opacity-60">2 days ago</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+</div>
+</div>
+<!-- Sidebar Stats/Quick Actions -->
+<div class="space-y-gutter">
+<!-- Quick Actions -->
+<div class="bg-primary text-on-primary rounded-xl p-6 shadow-md overflow-hidden relative">
+<div class="jamdani-pattern absolute inset-0 opacity-10"></div>
+<h3 class="font-headline-sm text-headline-sm mb-4 relative z-10">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-3 relative z-10">
+<button class="bg-white/10 hover:bg-white/20 p-4 rounded-lg flex flex-col items-center justify-center text-center transition-all border border-white/20">
+<span class="material-symbols-outlined text-2xl mb-1">add_box</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Add Teacher</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 p-4 rounded-lg flex flex-col items-center justify-center text-center transition-all border border-white/20">
+<span class="material-symbols-outlined text-2xl mb-1">post_add</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Post Notice</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 p-4 rounded-lg flex flex-col items-center justify-center text-center transition-all border border-white/20">
+<span class="material-symbols-outlined text-2xl mb-1">cloud_upload</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Results</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 p-4 rounded-lg flex flex-col items-center justify-center text-center transition-all border border-white/20">
+<span class="material-symbols-outlined text-2xl mb-1">settings</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Settings</span>
+</button>
+</div>
+</div>
+<!-- Calendar Peek -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Upcoming Events</h3>
+<span class="material-symbols-outlined text-on-surface-variant">calendar_today</span>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-2 h-2 rounded-full bg-secondary mt-2 mr-3"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Mid-term Examinations</p>
+<p class="text-[12px] text-on-surface-variant">Nov 15 - Nov 22</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-2 h-2 rounded-full bg-primary mt-2 mr-3"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Teacher's Training Workshop</p>
+<p class="text-[12px] text-on-surface-variant">Nov 25 | 10:00 AM</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-2 h-2 rounded-full bg-tertiary mt-2 mr-3"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Cultural Night 2024</p>
+<p class="text-[12px] text-on-surface-variant">Dec 02 | 6:00 PM</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Component -->
+<footer class="full-width bottom-0 bg-primary dark:bg-on-background border-t-4 border-secondary py-xl px-margin-mobile md:px-margin-desktop text-center md:text-left">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 relative">
+<div class="jamdani-pattern absolute inset-0 opacity-5"></div>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-primary">Academy BD</h2>
+<p class="font-body-md text-body-md text-on-primary/80 mt-2">Empowering the next generation through academic excellence.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-primary/80 hover:text-secondary transition-colors font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-primary/80 hover:text-secondary transition-colors font-body-md" href="#">Terms of Service</a>
+<a class="text-on-primary/80 hover:text-secondary transition-colors font-body-md" href="#">Academic Calendar</a>
+<a class="text-on-primary/80 hover:text-secondary transition-colors font-body-md" href="#">Contact Us</a>
+</div>
+</div>
+<div class="max-w-max-width mx-auto mt-8 pt-8 border-t border-white/10 text-center text-on-primary/60 text-label-md">
+                    © 2024 Academy BD. All rights reserved.
+                </div>
+</footer>
+</main>
+</div>
+<!-- FAB (Suppressed on Dashboard context if needed, but here it serves as an "Add New" trigger) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-secondary text-on-secondary rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 md:hidden">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

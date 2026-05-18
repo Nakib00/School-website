@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#3e0117",
+                    "inverse-primary": "#93d697",
+                    "secondary-container": "#feb234",
+                    "inverse-surface": "#2e312d",
+                    "on-surface-variant": "#40493f",
+                    "on-primary-fixed-variant": "#0c5221",
+                    "surface-dim": "#d8dbd4",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#8fd394",
+                    "secondary-fixed": "#ffddb2",
+                    "on-secondary-fixed": "#291800",
+                    "primary-fixed": "#aef3b1",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e6e9e2",
+                    "surface-container-highest": "#e0e3dc",
+                    "tertiary": "#662035",
+                    "on-secondary-container": "#6d4700",
+                    "tertiary-fixed-dim": "#ffb1c1",
+                    "primary-fixed-dim": "#93d697",
+                    "surface": "#f8faf3",
+                    "outline": "#717a6f",
+                    "primary-container": "#1a5c2a",
+                    "inverse-on-surface": "#eff2ea",
+                    "surface-container": "#ecefe7",
+                    "tertiary-container": "#83374b",
+                    "on-error": "#ffffff",
+                    "background": "#f8faf3",
+                    "on-secondary-fixed-variant": "#624000",
+                    "on-background": "#191d18",
+                    "secondary": "#815500",
+                    "on-tertiary-fixed-variant": "#772e42",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#2a6b37",
+                    "tertiary-fixed": "#ffd9df",
+                    "on-primary-fixed": "#002108",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3dc",
+                    "primary": "#004317",
+                    "outline-variant": "#c0c9bc",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8faf3",
+                    "surface-container-low": "#f2f5ed",
+                    "on-tertiary-container": "#ffacbd",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb94c",
+                    "on-surface": "#191d18"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin-desktop": "auto",
+                    "md": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "max-width": "1200px",
+                    "sm": "12px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "label-md": ["Noto Sans"],
+                    "headline-lg": ["Noto Sans"],
+                    "body-md": ["Noto Sans"],
+                    "headline-sm": ["Noto Sans"],
+                    "body-lg": ["Noto Sans"],
+                    "headline-lg-mobile": ["Noto Sans"],
+                    "headline-md": ["Noto Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    display: inline-block;
+    vertical-align: middle
+    }
+.jamdani-pattern {
+    background-color: #004317;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAAJ9Ot4itqbnxAtdABXq_u4qNEgy-ozoL5nFbg6MlwWJCvFTdCFKPmmugrGupbv2c7lSEEKeSwhRc7FVvsXtAC28tLzHqsOTPDtHck-fk0Zw6pzHyAZZHotA23JjoPZdLeHCzu7_MBOa27X8N3alpQdJwU1nthpJobB0_I937nRmXNIl4SqHUKbJHiB-imFLhpUaDKEutAgyw4yhsl9th2a0zwHTxypIMYz_EJX78-q41Nr3OwkEQh94-xMwpGXBF8sYFMqm2BW6_m);
+    opacity: 0.05
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant shadow-sm h-20">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-full">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-on-primary" data-icon="school">school</span>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Academy BD</h1>
+</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Notice Board</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Results</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-label-md text-label-md text-primary font-bold border border-primary px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all">BN/EN</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="min-h-screen pb-xl">
+<!-- Hero Section -->
+<section class="relative bg-primary-container py-xl overflow-hidden">
+<div class="absolute inset-0 jamdani-pattern"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center md:text-left">
+<div class="flex flex-col md:flex-row items-center justify-between gap-md">
+<div class="flex-1">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary-container mb-4">Academic Results Archive</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 max-w-2xl">Access and download verified examination results. We maintain transparency and excellence in educational reporting for all grade levels.</p>
+</div>
+<div class="hidden md:block w-64 h-64 bg-secondary-container rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[120px] text-on-secondary-container" data-icon="description">description</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter & Search Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop -mt-8 relative z-20">
+<div class="bg-surface-container-lowest rounded-xl shadow-md border border-outline-variant p-gutter">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md items-end">
+<div class="md:col-span-1">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Search by Class/Exam</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg transition-all" placeholder="e.g. Class 10" type="text"/>
+</div>
+</div>
+<div class="md:col-span-1">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Academic Year</label>
+<select class="w-full px-4 py-3 bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg">
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+</select>
+</div>
+<div class="md:col-span-1">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Result Type</label>
+<select class="w-full px-4 py-3 bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg">
+<option>All Exams</option>
+<option>Annual Exam</option>
+<option>Mid Term</option>
+<option>Class Test</option>
+</select>
+</div>
+<div class="md:col-span-1">
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-4 rounded-lg hover:shadow-lg transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                            Filter Results
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Results Display - Grouped Layout -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-xl">
+<!-- Year 2024 Group -->
+<div class="mb-lg">
+<div class="flex items-center gap-4 mb-gutter">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_today">calendar_today</span>
+                        Academic Year 2024
+                    </h3>
+<div class="h-px flex-1 bg-outline-variant"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Result Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-primary"></div>
+<div class="p-gutter">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-2">Class 10</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Annual Examination</h4>
+</div>
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-md text-label-md mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="event">event</span> Dec 12, 2024</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span> 1.2 MB</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-label-md text-label-md">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                                Download PDF
+                            </button>
+</div>
+</div>
+<!-- Result Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-secondary"></div>
+<div class="p-gutter">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-md mb-2">Class 8</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Junior Certificate Result</h4>
+</div>
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-md text-label-md mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="event">event</span> Nov 30, 2024</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span> 2.4 MB</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-label-md text-label-md">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                                Download PDF
+                            </button>
+</div>
+</div>
+<!-- Result Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-1 bg-primary"></div>
+<div class="p-gutter">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-2">Class 5</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Scholarship Assessment</h4>
+</div>
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-md text-label-md mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="event">event</span> Oct 15, 2024</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span> 890 KB</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-label-md text-label-md">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                                Download PDF
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Table View for 2023 -->
+<div class="mb-lg">
+<div class="flex items-center gap-4 mb-gutter">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="history">history</span>
+                        Academic Year 2023
+                    </h3>
+<div class="h-px flex-1 bg-outline-variant"></div>
+</div>
+<div class="overflow-x-auto bg-surface-container-lowest rounded-xl border border-outline-variant">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container border-b border-outline-variant">
+<th class="px-gutter py-4 font-label-md text-label-md text-on-surface uppercase tracking-wider">Class Name</th>
+<th class="px-gutter py-4 font-label-md text-label-md text-on-surface uppercase tracking-wider">Exam Type</th>
+<th class="px-gutter py-4 font-label-md text-label-md text-on-surface uppercase tracking-wider">Publish Date</th>
+<th class="px-gutter py-4 font-label-md text-label-md text-on-surface uppercase tracking-wider text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-gutter py-5 font-body-md text-on-surface font-bold">Class 12</td>
+<td class="px-gutter py-5 font-body-md text-on-surface-variant">HSC Final Mock Test</td>
+<td class="px-gutter py-5 font-body-md text-on-surface-variant">Dec 20, 2023</td>
+<td class="px-gutter py-5 text-right">
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span> PDF
+                                    </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-gutter py-5 font-body-md text-on-surface font-bold">Class 10</td>
+<td class="px-gutter py-5 font-body-md text-on-surface-variant">Test Examination 2023</td>
+<td class="px-gutter py-5 font-body-md text-on-surface-variant">Nov 15, 2023</td>
+<td class="px-gutter py-5 text-right">
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span> PDF
+                                    </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-gutter py-5 font-body-md text-on-surface font-bold">Class 6 - 9</td>
+<td class="px-gutter py-5 font-body-md text-on-surface-variant">Annual Results Combined</td>
+<td class="px-gutter py-5 font-body-md text-on-surface-variant">Dec 31, 2023</td>
+<td class="px-gutter py-5 text-right">
+<button class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span> PDF
+                                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-xl">
+<div class="bg-on-background rounded-2xl p-lg flex flex-col md:flex-row items-center gap-lg">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md text-primary-fixed mb-4">Official Verification</h3>
+<p class="font-body-md text-on-primary-fixed-variant mb-6">All results published on this portal are official documents and include a digital signature. In case of any discrepancy, please contact the controller of examinations immediately with your registration details.</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 text-primary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                            Authenticity Guaranteed
+                        </div>
+<div class="flex items-center gap-2 text-primary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+                            Secure Access
+                        </div>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<img alt="Official Result Logo" class="rounded-xl shadow-xl w-full max-w-sm" data-alt="A professional-looking certificate with an official gold seal and elegant green borders, photographed on a dark mahogany desk with soft ambient lighting creating a prestigious and institutional atmosphere. The composition emphasizes high-quality paper texture and precise typography, suggesting formal academic achievement and institutional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9q6AMkn6ERh-6Q0Z4mWGIfb15jfK-WMpUCPRCvxQ7swlFJfP3K6tm2cNWvh2jDxpIMFDSwz38yldhjLZ6upXwQI2VfACjc1NUJe_is-i-KSo8xyci9XmBnlIoj9vFrqUcDIKIHd4vzT7vFARMfuxkPuOAxx_Oe6h4-XgTuNm447Wl6vSaYetHJZNGvS-hcAaKJ1g7rTPiY1H-da8k0wCL_tox2KcxWtWUZ-9PN3drS1PdZKICrvKmrG4Gx_dhoc3sBC5HcIZ038iT"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t-4 border-secondary overflow-hidden">
+<div class="relative py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="absolute inset-0 jamdani-pattern"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-xl">
+<div class="md:col-span-1">
+<h2 class="font-headline-md text-headline-md font-bold text-on-primary mb-4">Academy BD</h2>
+<p class="font-body-md text-on-primary/80 mb-6 text-sm">Empowering the next generation of Bangladeshi leaders through modern education rooted in traditional values.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors" data-icon="mail">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary transition-colors" data-icon="call">call</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-4 uppercase tracking-wider text-secondary-fixed">Resources</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-primary/80">
+<li><a class="hover:text-secondary transition-colors" href="#">Academic Calendar</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Library Access</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Student Portal</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Scholarships</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-4 uppercase tracking-wider text-secondary-fixed">Quick Links</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-primary/80">
+<li><a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Admin Login</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-4 uppercase tracking-wider text-secondary-fixed">Location</h4>
+<p class="font-body-md text-on-primary/80 text-sm leading-relaxed">
+                        Sector 12, Uttara<br/>
+                        Dhaka - 1230, Bangladesh<br/>
+                        info@academybd.edu.bd
+                    </p>
+</div>
+</div>
+<div class="relative z-10 mt-xl pt-base border-t border-on-primary/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-primary/60">© 2024 Academy BD. All rights reserved.</p>
+<div class="flex gap-2">
+<img alt="BD Flag" class="h-6" data-alt="A small, stylized flag of Bangladesh waving against a clean white background, showing the vibrant green field and the distinct red circle in a high-contrast, professional graphic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxaO6t0DXPjezzaLj_jmVGGjj4gU5kFKivh_YUEAPSgY8a92QlClaNvEz0Q1LEuJ_dsHjFi-kVA6fMInVW4qQz7_b4_YuIDehD25P38CF0fLgCSTDvAGfYOpIo8WxCaNeDZAnq05u6FwY02FE_LUCjQ6qqHSPtYGfiaDCX3HyaY6bTMXUEDkh7G-YBcpoNns7CZ1p98gfRCuj8yndEHHfKr0G2pq7mBKMjIYzGIzhU-CGeFyVAxWOjLysmn4k39vO3S113XWMa5tft"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

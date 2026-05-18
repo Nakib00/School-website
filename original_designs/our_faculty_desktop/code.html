@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .academic-pattern {
+            background-color: #f8faf3;
+            background-image:  linear-gradient(30deg, #ecefe7 12%, transparent 12.5%, transparent 87%, #ecefe7 87.5%, #ecefe7), linear-gradient(150deg, #ecefe7 12%, transparent 12.5%, transparent 87%, #ecefe7 87.5%, #ecefe7), linear-gradient(30deg, #ecefe7 12%, transparent 12.5%, transparent 87%, #ecefe7 87.5%, #ecefe7), linear-gradient(150deg, #ecefe7 12%, transparent 12.5%, transparent 87%, #ecefe7 87.5%, #ecefe7), linear-gradient(60deg, #e0e3dc 25%, transparent 25.5%, transparent 75%, #e0e3dc 75.5%, #e0e3dc), linear-gradient(60deg, #e0e3dc 25%, transparent 25.5%, transparent 75%, #e0e3dc 75.5%, #e0e3dc);
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+            opacity: 0.4;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#3e0117",
+                      "inverse-primary": "#93d697",
+                      "secondary-container": "#feb234",
+                      "inverse-surface": "#2e312d",
+                      "on-surface-variant": "#40493f",
+                      "on-primary-fixed-variant": "#0c5221",
+                      "surface-dim": "#d8dbd4",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#8fd394",
+                      "secondary-fixed": "#ffddb2",
+                      "on-secondary-fixed": "#291800",
+                      "primary-fixed": "#aef3b1",
+                      "on-error-container": "#93000a",
+                      "surface-container-high": "#e6e9e2",
+                      "surface-container-highest": "#e0e3dc",
+                      "tertiary": "#662035",
+                      "on-secondary-container": "#6d4700",
+                      "tertiary-fixed-dim": "#ffb1c1",
+                      "primary-fixed-dim": "#93d697",
+                      "surface": "#f8faf3",
+                      "outline": "#717a6f",
+                      "primary-container": "#1a5c2a",
+                      "inverse-on-surface": "#eff2ea",
+                      "surface-container": "#ecefe7",
+                      "tertiary-container": "#83374b",
+                      "on-error": "#ffffff",
+                      "background": "#f8faf3",
+                      "on-secondary-fixed-variant": "#624000",
+                      "on-background": "#191d18",
+                      "secondary": "#815500",
+                      "on-tertiary-fixed-variant": "#772e42",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#2a6b37",
+                      "tertiary-fixed": "#ffd9df",
+                      "on-primary-fixed": "#002108",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e0e3dc",
+                      "primary": "#004317",
+                      "outline-variant": "#c0c9bc",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#f8faf3",
+                      "surface-container-low": "#f2f5ed",
+                      "on-tertiary-container": "#ffacbd",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#ffb94c",
+                      "on-surface": "#191d18"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "margin-desktop": "auto",
+                      "md": "24px",
+                      "xs": "4px",
+                      "lg": "48px",
+                      "max-width": "1200px",
+                      "sm": "12px",
+                      "xl": "80px"
+              },
+              "fontFamily": {
+                      "label-md": ["Noto Sans"],
+                      "headline-lg": ["Noto Sans"],
+                      "body-md": ["Noto Sans"],
+                      "headline-sm": ["Noto Sans"],
+                      "body-lg": ["Noto Sans"],
+                      "headline-lg-mobile": ["Noto Sans"],
+                      "headline-md": ["Noto Sans"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant shadow-sm w-full">
+<nav class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary">Academy BD</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Notice Board</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Results</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Teachers</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-label-md text-label-md text-primary font-bold">BN/EN</button>
+<button class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative py-xl overflow-hidden bg-primary-container">
+<div class="absolute inset-0 academic-pattern"></div>
+<div class="relative max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h1 class="font-headline-lg text-headline-lg text-on-primary-container mb-4 md:text-headline-lg">Our Distinguished Faculty</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 max-w-2xl mx-auto">
+                    Meet the dedicated educators who are shaping the future leaders of Bangladesh with excellence, integrity, and cultural pride.
+                </p>
+</div>
+</section>
+<!-- Search and Filter Section -->
+<section class="bg-surface-container py-md sticky top-20 z-40">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-surface p-4 rounded-xl shadow-sm border border-outline-variant">
+<div class="w-full md:w-1/3 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-body-md rounded-lg" placeholder="Search by name or subject..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 w-full md:w-auto no-scrollbar">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shrink-0">All Departments</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-label-md shrink-0 hover:bg-outline-variant transition-colors">Science</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-label-md shrink-0 hover:bg-outline-variant transition-colors">Humanities</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-label-md shrink-0 hover:bg-outline-variant transition-colors">Commerce</button>
+<button class="px-6 py-2 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-label-md shrink-0 hover:bg-outline-variant transition-colors">Language</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Faculty Grid -->
+<section class="py-xl max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Teacher Card 1 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-primary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A professional studio portrait of a senior male academic professor with a kind smile, wearing a traditional formal panjabi. The background is a soft, out-of-focus university library with warm lighting. The image style is clean, corporate, and institutional with a focus on dignity and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAYwzrGjv5CAa3OUcry5nStuPsyd0OvBRG9WQluslQpzCxLRD4iWc7yVfnVGjcDC6WxE3bGvSVI-Q_-ojwMM1nBflgXJEmRTvaAAbqHUx184EsGex5TXfLo1_ZeEYchtwjpGEfGHLs7E_kk3bP_xnQSomhRsB957bKsURRBPhTugsXldu8tv1g9ffPiKRY5iwtPAP3cjBEHfJHiEQb3u47iVHoE4fGFcZyQaMtNfSaw3FcKQXJp7mLHzz1kvjh8QO15E5YUI2-3A-b"/>
+<div class="absolute bottom-0 right-0 bg-secondary-container p-1 rounded-full border-2 border-surface">
+<span class="material-symbols-outlined text-[16px] text-on-secondary-container" data-weight="fill">verified</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Dr. Ahsan Ullah</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-primary-container/10 text-primary font-label-md text-label-md mb-3">Department Head, Physics</span>
+<p class="font-body-md text-body-md text-on-surface-variant">PhD in Theoretical Physics, BUET. 15+ years of teaching experience.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+<!-- Teacher Card 2 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-secondary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A sophisticated professional portrait of a female teacher in a modest green and gold saree, smiling confidently. The lighting is high-key and soft, creating a bright academic atmosphere. The background consists of modern geometric architectural elements in a clean white space, embodying a contemporary institutional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiQ0qRdmY9WfCktpeXjuHTlxzY2Zi6HHw6BzHdOmwmhpW4oNCwp3gOH49xqjVa_L56jjCackRXOWn07YpKdWy6WPPXLVckEGCZtvA2ZKC_tvMB5a9lEKyG0p0pPeyyebbvpEDQD9Bxm97NI9y2kPOSpcUSYBoXyJO7oVJUd4AZ92KDYsFwI3ERCvw343DuprsP07YfkGexuK6rnuGwzKdfWG50buZXptVgCaiSjqlewak0hpig0tWrYTJEA1nA305AdlHGhLqcAqnc"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Ms. Nusrat Jahan</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md mb-3">Senior Teacher, English</span>
+<p class="font-body-md text-body-md text-on-surface-variant">MA in English Literature, University of Dhaka. Expert in creative writing.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+<!-- Teacher Card 3 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-primary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A sharp, professional portrait of a young male math teacher wearing glasses and a crisp white shirt. He is holding a digital tablet and looks ready to teach. The setting is a clean, bright office with light-colored wood textures and soft natural sunlight, projecting a tech-savvy and modern educational vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEjDMgG6bDXgLutd9bTROokGGFsTKEJhZBplTwsjvrkku1HxO0ZOGQR3sjYOdNHZ8HpUpAUweqctuiVuV57FSYoSfj4A6q9EsG76q6P8bk-rxXCX23ojnksR7vn7v7rt0cFBavMZkFjl0YgUiIyevdmItCHtDfKhiD1o0Ij2eaFNwS2FxEmy7Z8exeVaN2UPRJeAYqZ7Q7T7v9iZc_rphgKhsdse546rWuxJbgfE3zBAuHbfnkgbg9i5aeWpYycOszXQUgT8dDtHf_"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Mr. Arifur Rahman</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-primary-container/10 text-primary font-label-md text-label-md mb-3">Mathematics Specialist</span>
+<p class="font-body-md text-body-md text-on-surface-variant">MSc in Mathematics. Specializes in Olympiad training and Advanced Calculus.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+<!-- Teacher Card 4 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-tertiary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A warm, engaging portrait of an experienced female biology teacher. She is standing in a brightly lit science lab with plants in the background. She is wearing a professional outfit with a traditional touch. The overall mood is nurturing yet highly professional, with a palette of soft whites and natural greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzguhu6Gbbo95Tat5fd79SK1NVdK-piBDYNrGQk-zZsN4e3Xtn6cYinriLY7D-yfvviJQ_iX-yH4HJTDHP9hjPjDMH8g3yNr5kH_x58d6zdX6XOebpuU6UoMVmBO7HLgmAzP52AHS5G6u4_-1VvSJWmHP433cTO_xK36EP95W_IuORXbVbIaswAg9dRcNxRLmSxW_KXVah6rKLvqJleYflH7oGFbo5TD1VyEp8w4yqHIZJKs8S46SKA0Oe0uwioFNakDkYl7AYEZ7_"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Dr. Farhana Yasmin</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-label-md mb-3">Biology &amp; Environment</span>
+<p class="font-body-md text-body-md text-on-surface-variant">PhD in Botany. Passionate about environmental sustainability and student research.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+<!-- Teacher Card 5 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-primary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A portrait of a male history teacher with a scholarly appearance, wearing a waistcoat over a formal shirt. He is sitting in a room filled with old maps and books. The lighting is warm and classical, evoking a sense of heritage and deep knowledge. The color palette features rich earthy tones and traditional academic textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx9dcXARkwxlZ9QnZIpEgdg9DKaGF9ImF2rUT_0vFw5sZaTrfm4ejfz3ZBSYenLch4aSStnljQX3xiCs9qwHZnN9kmIKdQY4yKX8RKMYhgDSwf-ocQa4GIwQQAwaxgC5alV1W4ANE767u3xJjzqWDrXvpaI-iwGBVmjLps3boWXTj9ZJ9hRMFM65Ijr-r3HwrwthhVYwUju9WrNxubim7_BQ5zfPebGUAd4J655qM9xRljdQihFX5dWxJqh_tfCvCWTK3Qz-wtCpV5"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Mr. Shahidul Islam</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-primary-container/10 text-primary font-label-md text-label-md mb-3">History &amp; Heritage</span>
+<p class="font-body-md text-body-md text-on-surface-variant">MA in History. Specialist in South Asian history and liberation war archives.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+<!-- Teacher Card 6 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-secondary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A bright and friendly portrait of a female chemistry teacher wearing a laboratory coat over a colorful saree. She is smiling and holding a beaker. The background is a clean, modern science laboratory with stainless steel surfaces and vibrant chemical solutions, creating a professional and energetic learning atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9J_hh7S0aIVyJKtjf05_Ta6AntcJ7aTzzdoxA17hllIYiAyVzsGUFRGbo9u8MLIE_yqJBtpq1epGlKfcwK4LYP6QMKdVUjoZCmk1lly2WzFdP6hjLkJZiGKlBTwXnrUBNKimYWztradCXTFe_scexYW2hWz9sOm36xGJLUNxyUFxz12CgoqVediH87O8n7IKrylNr3cHwoDuqoSgQhLBg9pYUQBzhnp_zcwA9HtGG9kxA20gUDMmdrSAWrMb1n12KkThGxCakkqBd"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Ms. Rehana Parveen</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md mb-3">Chemistry</span>
+<p class="font-body-md text-body-md text-on-surface-variant">MSc in Applied Chemistry. Lead coordinator for the annual Science Fair.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+<!-- Teacher Card 7 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-primary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A formal professional portrait of a senior male computer science teacher in a modern office with multiple monitors in the background showing code. He is wearing a grey sweater vest and looks approachable. The lighting is crisp and blue-toned, emphasizing technology and innovation in an academic context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBth5smQTOSknMRiPBt_jhHCgKg6uG2zqDRsv68vLRYUHYqk2OtHQk6ppuloG_SzqloaOM90BgthxCaMUV33fpu81nz7QJquSEbg9m34gtYqAIHYVOPgESx4_izwUdTEOVU97ehiyi2jQNIHSkpXszZ9SVwh1QREwEkoV8cRSCXZH3WVjZfXH9gR5pT74yY-G1zlLsOk0j5YYLkwLxu_FCRTYW-3e44dcY5rFp0eAky8z97y7hHzPcY6eTZ_xjjJjDNBwjhIBPAoNYG"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Mr. Tanvir Ahmed</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-primary-container/10 text-primary font-label-md text-label-md mb-3">ICT &amp; Computer Science</span>
+<p class="font-body-md text-body-md text-on-surface-variant">BSc in CSE, SUST. Specialist in Competitive Programming and AI basics.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+<!-- Teacher Card 8 -->
+<div class="bg-surface rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="h-4 w-full bg-tertiary rounded-t-xl"></div>
+<div class="p-6 flex flex-col items-center text-center flex-grow">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Teacher Portrait" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A professional and elegant portrait of a female geography teacher standing in front of a large physical relief map of the world. She is wearing a deep maroon traditional dress. The scene is illuminated by soft, directional light that highlights the textures of the map and creates a studious, global-focused atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqgnfObT4vK1bOMv2xv5c8ca3U2pbmJmoWzyjQhJQsSLY4NsgReMUzsB_5R9cQ9Z9RAidvk8eB1-fte0hkIX4_1udaIG3aGqta1VOKaineLLG5FMuOmdt2OlYrAGEp1EoipUybxFlS1SKL9SOed-pr1ZP4Vfwi_EIMssS-zFe9UseR74nfmN0_mAklIdwNqVWsSjzXVXcQdJVekWIQ5iVQSlWtYf-3wIp6_ig5dvczfVLCj1M8heZK1XuL5eAnZqGfDGwkzcErtjL1"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Ms. Sabina Yeasmin</h3>
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-label-md mb-3">Geography</span>
+<p class="font-body-md text-body-md text-on-surface-variant">MSc in Geography &amp; Environment. Lead organizer for field excursions.</p>
+</div>
+<div class="p-4 border-t border-outline-variant flex justify-center gap-4">
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">mail</span></button>
+<button class="text-primary hover:text-secondary-container transition-colors"><span class="material-symbols-outlined">school</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-high py-xl">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary rounded-2xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 academic-pattern -mr-20 -mt-20 opacity-20 transform rotate-45"></div>
+<div class="relative z-10 text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-on-primary mb-2">Want to join our faculty?</h2>
+<p class="font-body-md text-body-md text-on-primary/80">We are always looking for passionate educators to join our team.</p>
+</div>
+<button class="relative z-10 bg-secondary text-on-secondary px-8 py-3 rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">View Career Openings</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full py-xl border-t-4 border-secondary">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<div class="text-center md:text-left">
+<span class="font-headline-md text-headline-md font-bold text-on-primary block mb-4">Academy BD</span>
+<p class="font-body-md text-body-md text-on-primary/70">Empowering the next generation with quality education and moral values.</p>
+</div>
+<div class="text-center md:text-left">
+<h4 class="font-label-md text-label-md text-secondary font-bold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary/80 hover:text-secondary transition-colors" href="#">Academic Calendar</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary transition-colors" href="#">Online Admission</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary transition-colors" href="#">Exam Results</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary transition-colors" href="#">Notice Board</a></li>
+</ul>
+</div>
+<div class="text-center md:text-left">
+<h4 class="font-label-md text-label-md text-secondary font-bold mb-4">Institutional</h4>
+<ul class="space-y-2">
+<li><a class="text-on-primary/80 hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-primary/80 hover:text-secondary transition-colors" href="#">Code of Conduct</a></li>
+</ul>
+</div>
+<div class="text-center md:text-left">
+<h4 class="font-label-md text-label-md text-secondary font-bold mb-4">Contact Us</h4>
+<p class="text-on-primary/80 mb-2">123 Education Ave, Dhaka</p>
+<p class="text-on-primary/80 mb-2">info@academybd.edu</p>
+<div class="flex justify-center md:justify-start gap-4 mt-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-xl pt-8 border-t border-on-primary/10 text-center md:text-left">
+<p class="text-on-primary/60 font-body-md text-body-md">© 2024 Academy BD. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

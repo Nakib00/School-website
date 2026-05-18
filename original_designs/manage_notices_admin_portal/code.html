@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manage Notices | Academy BD Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .jamdani-pattern {
+            background-color: #004317;
+            background-image: radial-gradient(#1a5c2a 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#291800",
+                        "surface-container-high": "#e6e9e2",
+                        "on-surface-variant": "#40493f",
+                        "outline": "#717a6f",
+                        "on-tertiary-fixed-variant": "#772e42",
+                        "surface": "#f8faf3",
+                        "secondary-fixed": "#ffddb2",
+                        "on-surface": "#191d18",
+                        "inverse-surface": "#2e312d",
+                        "primary-fixed-dim": "#93d697",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#ffacbd",
+                        "surface-dim": "#d8dbd4",
+                        "surface-container-highest": "#e0e3dc",
+                        "primary": "#004317",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb94c",
+                        "on-primary-container": "#8fd394",
+                        "secondary-container": "#feb234",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#2a6b37",
+                        "surface-bright": "#f8faf3",
+                        "tertiary": "#662035",
+                        "primary-fixed": "#aef3b1",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e0e3dc",
+                        "primary-container": "#1a5c2a",
+                        "outline-variant": "#c0c9bc",
+                        "inverse-on-surface": "#eff2ea",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-primary-fixed-variant": "#0c5221",
+                        "on-background": "#191d18",
+                        "surface-container": "#ecefe7",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#93d697",
+                        "on-primary-fixed": "#002108",
+                        "surface-container-low": "#f2f5ed",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#815500",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#6d4700",
+                        "tertiary-container": "#83374b",
+                        "on-tertiary-fixed": "#3e0117",
+                        "background": "#f8faf3",
+                        "tertiary-fixed-dim": "#ffb1c1",
+                        "tertiary-fixed": "#ffd9df",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "48px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "margin-desktop": "auto",
+                        "sm": "12px",
+                        "max-width": "1200px",
+                        "md": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "label-md": ["Noto Sans"],
+                        "headline-sm": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface-container-low min-h-screen flex font-body-md text-on-surface overflow-x-hidden">
+<!-- SideNavBar Anchor -->
+<aside class="flex flex-col h-screen py-6 bg-surface-container dark:bg-inverse-surface docked left-0 h-full w-64 shadow-md sticky top-0 shrink-0">
+<div class="px-6 mb-8">
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface mb-1">Admin Portal</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">School Management</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center bg-primary-container text-on-primary-container dark:bg-primary dark:text-on-primary rounded-lg px-4 py-3 mx-2" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="campaign" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-label-md text-label-md">Notices</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+<span class="font-label-md text-label-md">Teachers</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="description">description</span>
+<span class="font-label-md text-label-md">Results</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-highest dark:hover:bg-on-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="collections">collections</span>
+<span class="font-label-md text-label-md">Gallery</span>
+</a>
+</nav>
+<div class="px-4 py-6 border-t border-outline-variant">
+<div class="flex items-center space-x-3">
+<img alt="Admin User" class="w-10 h-10 rounded-full" data-alt="A professional headshot of a middle-aged academic administrator in a formal office setting. He is wearing a dark charcoal suit with a crisp white shirt, exuding authority and institutional trust. The background is a soft-focus library with rows of leather-bound books, illuminated by warm, natural light coming from a nearby window, maintaining a corporate and modern academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYLlncRxbUU3wOah7G2_Hvvco8n1H6CZlCPDGebJsMbyPzY8BaGIwieW4f6KgxSXuK9Rk1M_vgbYf3uiEV1zwn_bygG-It2oEN4j0X2_GJuQ4Z-vqXkTVH01mZW52t3VZIUSHLQqSTFsDFWa_3iStu1DCh9xjmYqFzvzDkVN0hjZSY2ZPUL_tREF8xGmOGcmJ532ZSGeMF6JYyaK6Zi_5FHMyhN6gvGcYKO6Z27B-17XX4nx-hayd9Gu1dr25qqgWmNKkUNN1d35vI"/>
+<div>
+<p class="font-label-md text-label-md font-bold">Admin User</p>
+<p class="text-xs text-on-surface-variant">Principal's Office</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 min-w-0 p-md lg:p-lg space-y-md relative">
+<!-- Top Toolbar -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-md mb-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Notices</h2>
+<nav class="flex text-xs text-on-surface-variant mt-1 gap-1">
+<span>Admin</span> / <span class="font-semibold text-primary">Manage Notices</span>
+</nav>
+</div>
+<button class="flex items-center justify-center gap-xs px-6 py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                + Add Notice
+            </button>
+</header>
+<!-- Filters Pill Buttons -->
+<div class="flex flex-wrap gap-sm mb-lg">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md">All</button>
+<button class="px-6 py-2 bg-surface text-on-surface-variant border border-outline-variant rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">Academic</button>
+<button class="px-6 py-2 bg-surface text-on-surface-variant border border-outline-variant rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">Exam</button>
+<button class="px-6 py-2 bg-surface text-on-surface-variant border border-outline-variant rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">Holiday</button>
+<button class="px-6 py-2 bg-surface text-on-surface-variant border border-outline-variant rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors">General</button>
+</div>
+<!-- Data Table Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant overflow-hidden border-t-4 border-primary">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low">
+<tr>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant border-b border-outline-variant">Title</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant border-b border-outline-variant">Category</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant border-b border-outline-variant">Date</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant border-b border-outline-variant">Status</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant border-b border-outline-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-5 font-label-md text-label-md font-bold text-on-surface">Annual Sports Day — 2025</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-[#e3f2fd] text-[#1976d2] text-[12px] font-bold rounded-full border border-[#bbdefb]">General</span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant">15 May 2025</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[12px] font-bold rounded-full">Published</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="edit">edit</span></button>
+<button class="p-2 text-outline hover:text-error transition-colors"><span class="material-symbols-outlined" data-icon="delete">delete</span></button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-5 font-label-md text-label-md font-bold text-on-surface">Half Yearly Exam Schedule</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-full border border-secondary-fixed-dim">Exam</span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant">10 May 2025</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[12px] font-bold rounded-full">Published</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="edit">edit</span></button>
+<button class="p-2 text-outline hover:text-error transition-colors"><span class="material-symbols-outlined" data-icon="delete">delete</span></button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-5 font-label-md text-label-md font-bold text-on-surface">Eid Holiday Notice</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[12px] font-bold rounded-full border border-primary-fixed-dim">Holiday</span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant">02 May 2025</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-full">Draft</span>
+</td>
+<td class="px-6 py-5 text-right space-x-2">
+<button class="p-2 text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="edit">edit</span></button>
+<button class="p-2 text-outline hover:text-error transition-colors"><span class="material-symbols-outlined" data-icon="delete">delete</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Form Section Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant overflow-hidden border-t-4 border-secondary mt-xl">
+<div class="px-6 py-4 bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="edit_note">edit_note</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Add / Edit Notice</h3>
+</div>
+<form class="p-6 space-y-md">
+<!-- Title Field -->
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Notice Title</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg px-4 py-3 font-body-md transition-colors" placeholder="Enter the primary headline for the notice" type="text"/>
+</div>
+<!-- Grid Row Category/Date -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Category</label>
+<select class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg px-4 py-3 font-body-md transition-colors">
+<option>Academic</option>
+<option>Exam</option>
+<option>Holiday</option>
+<option>General</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Date</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg px-4 py-3 font-body-md transition-colors" type="date"/>
+</div>
+</div>
+<!-- Notice Body -->
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Notice Body</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 rounded-t-lg px-4 py-3 font-body-md transition-colors" placeholder="Enter the detailed notice content here..." rows="4"></textarea>
+</div>
+<!-- Attachment Upload -->
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Attachment</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-lg text-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary mb-2" data-icon="cloud_upload">cloud_upload</span>
+<p class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary">Click to upload file</p>
+<p class="text-on-surface-variant opacity-60 text-xs mt-1">PDF, DOCX, max 5MB</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-md pt-md">
+<button class="flex-1 px-8 py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-sm hover:opacity-90 transition-opacity" type="submit">
+                        Publish Notice
+                    </button>
+<button class="flex-1 px-8 py-3 bg-transparent border-2 border-primary text-primary rounded-lg font-label-md text-label-md hover:bg-primary/5 transition-all" type="button">
+                        Save as Draft
+                    </button>
+</div>
+</form>
+</section>
+<!-- Footer Anchor -->
+<footer class="w-full py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto text-center md:text-left pt-lg border-t-4 border-secondary mt-xl relative">
+<div class="absolute inset-0 jamdani-pattern -z-10 opacity-5"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<div class="space-y-md">
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Academy BD</h2>
+<p class="text-on-surface-variant">Fostering excellence through traditional values and modern learning solutions.</p>
+</div>
+<div class="space-y-sm">
+<h4 class="font-bold text-on-surface">Resources</h4>
+<ul class="space-y-xs text-on-surface-variant">
+<li><a class="hover:text-primary" href="#">Academic Calendar</a></li>
+<li><a class="hover:text-primary" href="#">Notice Board</a></li>
+<li><a class="hover:text-primary" href="#">Results Portal</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-bold text-on-surface">Institutional</h4>
+<ul class="space-y-xs text-on-surface-variant">
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<h4 class="font-bold text-on-surface">Contact</h4>
+<p class="text-on-surface-variant">123 Education Ave, Dhaka<br/>support@academybd.edu</p>
+</div>
+</div>
+<div class="mt-lg pt-md border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-sm text-on-surface-variant">© 2024 Academy BD. All rights reserved.</p>
+<div class="flex gap-md">
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

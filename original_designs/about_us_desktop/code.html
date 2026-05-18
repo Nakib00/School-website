@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#3e0117",
+                    "inverse-primary": "#93d697",
+                    "secondary-container": "#feb234",
+                    "inverse-surface": "#2e312d",
+                    "on-surface-variant": "#40493f",
+                    "on-primary-fixed-variant": "#0c5221",
+                    "surface-dim": "#d8dbd4",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#8fd394",
+                    "secondary-fixed": "#ffddb2",
+                    "on-secondary-fixed": "#291800",
+                    "primary-fixed": "#aef3b1",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e6e9e2",
+                    "surface-container-highest": "#e0e3dc",
+                    "tertiary": "#662035",
+                    "on-secondary-container": "#6d4700",
+                    "tertiary-fixed-dim": "#ffb1c1",
+                    "primary-fixed-dim": "#93d697",
+                    "surface": "#f8faf3",
+                    "outline": "#717a6f",
+                    "primary-container": "#1a5c2a",
+                    "inverse-on-surface": "#eff2ea",
+                    "surface-container": "#ecefe7",
+                    "tertiary-container": "#83374b",
+                    "on-error": "#ffffff",
+                    "background": "#f8faf3",
+                    "on-secondary-fixed-variant": "#624000",
+                    "on-background": "#191d18",
+                    "secondary": "#815500",
+                    "on-tertiary-fixed-variant": "#772e42",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#2a6b37",
+                    "tertiary-fixed": "#ffd9df",
+                    "on-primary-fixed": "#002108",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3dc",
+                    "primary": "#004317",
+                    "outline-variant": "#c0c9bc",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8faf3",
+                    "surface-container-low": "#f2f5ed",
+                    "on-tertiary-container": "#ffacbd",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb94c",
+                    "on-surface": "#191d18"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin-desktop": "auto",
+                    "md": "24px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "max-width": "1200px",
+                    "sm": "12px",
+                    "xl": "80px"
+            },
+            "fontFamily": {
+                    "label-md": ["Noto Sans"],
+                    "headline-lg": ["Noto Sans"],
+                    "body-md": ["Noto Sans"],
+                    "headline-sm": ["Noto Sans"],
+                    "body-lg": ["Noto Sans"],
+                    "headline-lg-mobile": ["Noto Sans"],
+                    "headline-md": ["Noto Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .jamdani-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 67, 23, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .bengali-border {
+            border-image: linear-gradient(45deg, #004317 25%, #815500 50%, #004317 75%) 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface jamdani-pattern min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 sticky z-50">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">Academy BD</div>
+<nav class="hidden md:flex items-center space-x-6">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Notice Board</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Results</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Teachers</a>
+<a class="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-label-md text-label-md text-primary border border-primary px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all">BN/EN</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left">
+<div class="grid md:grid-cols-2 gap-lg items-center">
+<div>
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container font-label-md text-label-md rounded-lg mb-4">ESTD. 1972</span>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Nurturing Minds, Honoring Heritage.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Academy BD stands as a beacon of academic excellence in Bangladesh, blending traditional values with modern educational methodologies to shape the leaders of tomorrow.</p>
+</div>
+<div class="relative group">
+<div class="absolute -inset-2 bg-gradient-to-br from-primary to-secondary opacity-10 rounded-xl group-hover:opacity-20 transition-opacity"></div>
+<img alt="School Campus" class="rounded-xl shadow-md w-full aspect-video object-cover" data-alt="A wide-angle professional photograph of a prestigious school campus in Bangladesh during golden hour. The architecture features a blend of modern clean lines and traditional terracotta influences. Lush green lawns and vibrant tropical plants surround the main academic building. The lighting is warm and welcoming, emphasizing a mood of institutional trust and academic excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0edXdGIIE27ZWPSbRnp2re9p5_9N1tUd8IIGHQrgnjdxBBPHJzqG7_3HVwdJKVYQgGqSs7eSYBi_cvg8h-4xS19rl_QQnmTrKtpwdOjOzLJfuEWV_fTkFTL0to5W6rIPRaZehynLVQ6LTU8veAuoewY5mODMT5kv9B7wzscoo3ZXBB-2AIZzekFrZmNFPl0mdEUs83Eb_yHFECNGfyOai7kmnhtKyDQtolcy-PcJG4YNJVGQLH-TRK_CicgKYo_X-F4Xn11UQ-v93"/>
+</div>
+</div>
+</section>
+<!-- History Section - Asymmetric Bento Grid -->
+<section class="mb-xl">
+<div class="flex items-center gap-4 mb-lg">
+<div class="h-[2px] w-12 bg-secondary"></div>
+<h2 class="font-headline-md text-headline-md text-primary">Legacy of Excellence</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-7 bg-surface-container-low p-lg rounded-xl border-t-4 border-primary">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Our History</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Founded in the heart of post-independence Bangladesh, Academy BD was established with a singular vision: to provide quality education that empowers the youth of our newly formed nation. What began as a small gathering of dedicated educators has grown into a premier institution known for its rigorous standards and vibrant community.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Through decades of growth, we have remained anchored in our commitment to fostering a spirit of inquiry and a deep respect for our cultural identity, ensuring every student leaves with both knowledge and character.</p>
+</div>
+<div class="md:col-span-5 grid grid-rows-2 gap-gutter">
+<div class="bg-primary text-on-primary p-md rounded-xl flex items-center justify-between">
+<div>
+<div class="font-headline-lg text-headline-lg">50+</div>
+<div class="font-label-md text-label-md opacity-80">Years of Service</div>
+</div>
+<span class="material-symbols-outlined text-4xl opacity-30">history_edu</span>
+</div>
+<div class="bg-secondary text-on-secondary p-md rounded-xl flex items-center justify-between">
+<div>
+<div class="font-headline-lg text-headline-lg">15k+</div>
+<div class="font-label-md text-label-md opacity-80">Alumni Success</div>
+</div>
+<span class="material-symbols-outlined text-4xl opacity-30">workspace_premium</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision Cards -->
+<section class="grid md:grid-cols-2 gap-lg mb-xl">
+<div class="bg-white p-lg rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant border-t-4 border-primary relative overflow-hidden">
+<div class="absolute top-4 right-4 text-primary opacity-10">
+<span class="material-symbols-outlined text-6xl">track_changes</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">flare</span>
+                    Our Mission
+                </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    To cultivate a dynamic learning environment where students achieve academic mastery, develop critical thinking skills, and embrace a lifelong passion for discovery. We strive to integrate traditional values with a global perspective.
+                </p>
+</div>
+<div class="bg-white p-lg rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant border-t-4 border-secondary relative overflow-hidden">
+<div class="absolute top-4 right-4 text-secondary opacity-10">
+<span class="material-symbols-outlined text-6xl">visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">visibility</span>
+                    Our Vision
+                </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    To be the leading center for holistic education in Bangladesh, producing principled citizens who lead with integrity, innovate with purpose, and contribute meaningfully to the progress of our nation and the world.
+                </p>
+</div>
+</section>
+<!-- Principal's Message -->
+<section class="bg-white rounded-xl shadow-lg border border-outline-variant overflow-hidden">
+<div class="grid md:grid-cols-5 items-stretch">
+<div class="md:col-span-2 relative">
+<img alt="Principal" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" data-alt="A formal, professional portrait of a distinguished male principal in his late 50s, wearing a sharp dark green suit and a light grey shirt. He is seated in a library with rows of classic books in the background. The lighting is soft and studio-quality, creating a dignified and trustworthy presence. The atmosphere reflects academic leadership and institutional authority in a modern light-mode setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9un7_iHaVtkUXlOWQSeg1BVAiXIGJ1fsgiU4n-HQRjNsu8wgn5LH4LuW7_XrwIuzIwyDm6oPKE7HuvwHp1HPwB9O8CYrO6Shx5lAqmB3iXXsS0wtvQDLR7vYwMT3io1C9pnDw9m68vWZaMjxu8xHwCcAw_yX7bJWPKiTrym-vRAc_i7osG3f0CF8jjPoHEtHmVL_M1aHN6TJZSJfzzEVM8d4O5JOoXRcPXw3U9xfbcYR-PeNH6z_kI3W0tHoXJYu6_117AdyshHra"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-on-primary p-md text-center">
+<div class="font-headline-sm text-headline-sm">Dr. Ahmed Rahman</div>
+<div class="font-label-md text-label-md opacity-80">Principal, Academy BD</div>
+</div>
+</div>
+<div class="md:col-span-3 p-lg flex flex-col justify-center relative">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<svg class="fill-primary" height="120" viewbox="0 0 100 100" width="120">
+<path d="M20 50 L50 20 L80 50 L50 80 Z"></path>
+<path d="M50 0 L100 50 L50 100 L0 50 Z" opacity="0.5"></path>
+</svg>
+</div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">format_quote</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">A Message from the Principal</h3>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant italic">
+<p>"Education is the most powerful weapon which you can use to change the world. At Academy BD, we take this responsibility with the utmost gravity and pride. Our institution is not just a place for textbooks; it is a sanctuary for growth, discovery, and character building."</p>
+<p>"We welcome you to join our family as we continue to write the next chapters of Bangladesh's academic history together. Our doors are always open to those who seek knowledge with humility and ambition."</p>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">signature</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary">Official Correspondence</p>
+<p class="font-body-md text-body-md text-on-surface-variant">principal@academybd.edu</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-background border-t-4 border-secondary text-on-primary py-xl">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center md:text-left">
+<div class="grid md:grid-cols-4 gap-lg mb-lg">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-primary mb-4">Academy BD</div>
+<p class="font-body-md text-body-md text-on-primary/70">Building a brighter future for the youth of Bangladesh through excellence in education.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-secondary-fixed font-bold mb-4">Navigation</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-primary/80">
+<li><a class="hover:text-secondary transition-colors" href="#">Academic Calendar</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Faculty Directory</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Admissions</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Campus Map</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-secondary-fixed font-bold mb-4">Quick Links</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-primary/80">
+<li><a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Student Portal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-secondary-fixed font-bold mb-4">Connect</h4>
+<div class="flex justify-center md:justify-start gap-4">
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-on-primary/10 text-center font-body-md text-body-md text-on-primary/60">
+                © 2024 Academy BD. All rights reserved. Designed for Excellence.
+            </div>
+</div>
+</footer>
+</body></html>
