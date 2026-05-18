@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const getNavLinkClass = () => ({ isActive }) => 
     `${isActive ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"} transition-colors`;
 
@@ -21,16 +23,53 @@ const MainLayout = () => {
             <NavLink to="/gallery" className={getNavLinkClass()}>Gallery</NavLink>
             <NavLink to="/teachers" className={getNavLinkClass()}>Teachers</NavLink>
             <NavLink to="/about" className={getNavLinkClass()}>About</NavLink>
+            <NavLink to="/contact" className={getNavLinkClass()}>Contact</NavLink>
             <NavLink to="/admin" className={({ isActive }) => `${isActive ? "text-primary border-primary bg-primary/5" : "text-on-surface-variant hover:text-primary border-outline-variant"} border px-2 py-1 rounded transition-colors`}>Admin</NavLink>
           </div>
           <div className="flex items-center gap-4">
             <button className="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:opacity-90 transition-opacity">BN/EN</button>
-            <button className="md:hidden text-primary">
+            <button 
+              onClick={() => setIsMobileMenuOpen(true)} 
+              className="md:hidden text-primary cursor-pointer hover:opacity-80 transition-opacity"
+              aria-label="Open mobile menu"
+            >
               <span className="material-symbols-outlined">menu</span>
             </button>
           </div>
         </nav>
       </header>
+
+      {/* Mobile Nav Drawer Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 flex md:hidden bg-on-surface/40 backdrop-blur-sm transition-opacity">
+          <div className="w-[280px] bg-surface h-full shadow-lg flex flex-col p-6 relative border-r border-outline-variant">
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between pb-4 border-b border-outline-variant mb-6">
+              <span className="font-headline-md text-headline-sm font-bold text-primary">Academy BD</span>
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-on-surface-variant hover:text-primary transition-colors cursor-pointer"
+                aria-label="Close mobile menu"
+              >
+                <span className="material-symbols-outlined">close</span>
+              </button>
+            </div>
+            {/* Drawer Links */}
+            <div className="flex flex-col gap-4 font-label-md text-label-md">
+              <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)} className={getNavLinkClass()}>Home</NavLink>
+              <NavLink to="/notice-board" onClick={() => setIsMobileMenuOpen(false)} className={getNavLinkClass()}>Notice Board</NavLink>
+              <NavLink to="/results" onClick={() => setIsMobileMenuOpen(false)} className={getNavLinkClass()}>Results</NavLink>
+              <NavLink to="/gallery" onClick={() => setIsMobileMenuOpen(false)} className={getNavLinkClass()}>Gallery</NavLink>
+              <NavLink to="/teachers" onClick={() => setIsMobileMenuOpen(false)} className={getNavLinkClass()}>Teachers</NavLink>
+              <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)} className={getNavLinkClass()}>About</NavLink>
+              <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={getNavLinkClass()}>Contact</NavLink>
+              <NavLink to="/admin" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => `${isActive ? "text-primary border-primary bg-primary/5" : "text-on-surface-variant hover:text-primary border-outline-variant"} border px-2 py-1 rounded transition-colors w-fit mt-4`}>Admin</NavLink>
+            </div>
+          </div>
+          {/* Backdrop Click */}
+          <div className="flex-grow cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}></div>
+        </div>
+      )}
 
       <main className="flex-grow">
         <Outlet />

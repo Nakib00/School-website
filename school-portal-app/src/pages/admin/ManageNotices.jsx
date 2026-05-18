@@ -106,7 +106,8 @@ const ManageNotices = () => {
 
       {/* Data Table Card */}
       <section className="bg-white rounded-xl shadow-[0px_4px_12px_rgba(26,92,42,0.05)] border border-outline-variant overflow-hidden border-t-4 border-primary">
-        <div className="overflow-x-auto">
+        {/* Desktop Table View (Hidden on Mobile) */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead className="bg-surface-container-low">
               <tr>
@@ -141,10 +142,10 @@ const ManageNotices = () => {
                     </span>
                   </td>
                   <td className="px-6 py-5 text-right space-x-2">
-                    <button onClick={() => handleEditClick(notice)} className="p-2 text-outline hover:text-primary transition-colors">
+                    <button onClick={() => handleEditClick(notice)} className="p-2 text-outline hover:text-primary transition-colors cursor-pointer" title="Edit">
                       <span className="material-symbols-outlined">edit</span>
                     </button>
-                    <button onClick={() => deleteNotice(notice.id)} className="p-2 text-outline hover:text-error transition-colors">
+                    <button onClick={() => deleteNotice(notice.id)} className="p-2 text-outline hover:text-error transition-colors cursor-pointer" title="Delete">
                       <span className="material-symbols-outlined">delete</span>
                     </button>
                   </td>
@@ -159,6 +160,57 @@ const ManageNotices = () => {
               )}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card List View (Visible only on smaller screens) */}
+        <div className="block md:hidden divide-y divide-outline-variant">
+          {filteredNotices.map((notice) => (
+            <div key={notice.id} className="p-4 space-y-3 hover:bg-surface-container-low/30 transition-colors">
+              <div className="flex justify-between items-start gap-2">
+                <h4 className="font-label-md text-label-md font-bold text-on-surface line-clamp-2">{notice.title}</h4>
+                <div className="flex gap-1 flex-shrink-0">
+                  <button 
+                    onClick={() => {
+                      handleEditClick(notice);
+                      const element = document.getElementById('form-section');
+                      if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }} 
+                    className="p-2 text-outline hover:text-primary transition-colors hover:bg-primary/5 rounded-full cursor-pointer" 
+                    title="Edit"
+                  >
+                    <span className="material-symbols-outlined text-sm">edit</span>
+                  </button>
+                  <button onClick={() => deleteNotice(notice.id)} className="p-2 text-outline hover:text-error transition-colors hover:bg-error-container/20 rounded-full cursor-pointer" title="Delete">
+                    <span className="material-symbols-outlined text-sm">delete</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
+                <div className="flex items-center gap-2">
+                  <span className={`px-2.5 py-0.5 text-[11px] font-bold rounded-full border ${
+                    notice.category === 'Exam' ? 'bg-secondary-fixed text-on-secondary-fixed-variant border-secondary-fixed-dim' :
+                    notice.category === 'Holiday' ? 'bg-primary-fixed text-on-primary-fixed-variant border-primary-fixed-dim' :
+                    'bg-[#e3f2fd] text-[#1976d2] border-[#bbdefb]'
+                  }`}>
+                    {notice.category}
+                  </span>
+                  <span className="text-xs text-on-surface-variant font-medium">{notice.date}</span>
+                </div>
+                <span className={`px-2.5 py-0.5 text-[11px] font-bold rounded-full ${
+                  notice.status === 'Draft' 
+                    ? 'bg-secondary-fixed text-on-secondary-fixed-variant' 
+                    : 'bg-primary-fixed text-on-primary-fixed-variant'
+                }`}>
+                  {notice.status || 'Published'}
+                </span>
+              </div>
+            </div>
+          ))}
+          {filteredNotices.length === 0 && (
+            <div className="text-center py-8 text-on-surface-variant font-body-md">
+              No notices available.
+            </div>
+          )}
         </div>
       </section>
 
